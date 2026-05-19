@@ -45,9 +45,6 @@ export default function App() {
             src="/logo-cirulli.png"
             alt="Atacado Cirulli"
             className="h-14 md:h-16 w-auto object-contain"
-            style={{
-              filter: "brightness(0) saturate(100%)",
-            }}
           />
           <a
             href={WHATSAPP_URL}
@@ -353,9 +350,6 @@ export default function App() {
               src="/logo-cirulli.png"
               alt="Atacado Cirulli"
               className="h-14 w-auto object-contain"
-              style={{
-                filter: "brightness(0) invert(1)",
-              }}
             />
             <span className="h-px w-8 bg-cream/30" aria-hidden />
             <span className="text-xs uppercase tracking-[0.2em] text-cream/60">Semijoias no atacado</span>
