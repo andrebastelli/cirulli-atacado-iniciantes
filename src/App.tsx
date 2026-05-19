@@ -50,7 +50,7 @@ export default function App() {
             href={WHATSAPP_URL}
             target="_blank"
             rel="noopener noreferrer"
-            className="hidden border border-ink/20 px-5 py-2 text-xs font-semibold uppercase tracking-[0.18em] text-ink transition hover:bg-ink hover:text-cream md:inline-block"
+            className="hidden border border-ink/20 px-5 py-2 text-xs font-semibold uppercase tracking-[0.18em] text-gold transition hover:bg-ink hover:text-cream md:inline-block"
             aria-label="Falar no WhatsApp"
           >
             WhatsApp
