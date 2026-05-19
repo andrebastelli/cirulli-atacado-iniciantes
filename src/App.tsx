@@ -94,13 +94,13 @@ export default function App() {
       </div>
 
       {/* MOBILE TITLE */}
-      <h1 className="mt-[24px] text-[42px] leading-[1.02] text-ink font-display md:hidden">
+      <h1 className="mt-[24px] text-[42px] leading-[1.02] text-ink md:hidden">
         Comece a lucrar com <em className="text-gold">semijoias</em>
         <br /> mesmo sem experiência.
       </h1>
 
       {/* DESKTOP TITLE */}
-      <h1 className="hidden md:block mt-[24px] text-[72px] leading-[1.02] text-ink font-display">
+      <h1 className="hidden md:block mt-[24px] text-[72px] leading-[1.02] text-ink">
         Comece a lucrar com <em className="text-gold">semijoias</em>
         <br /> mesmo sem experiência.
       </h1>
@@ -138,7 +138,7 @@ export default function App() {
     ].map((s) => (
       <div key={s.l} className="text-center">
 
-        <dt className="font-display text-[26px] text-ink leading-[1]">
+        <dt className="text-[26px] text-ink leading-[1]">
           {s.v}
         </dt>
 
@@ -161,7 +161,7 @@ export default function App() {
     ].map((s) => (
       <div key={s.l}>
 
-        <dt className="font-display text-[32px] text-ink leading-[1]">
+        <dt className="text-[32px] text-ink leading-[1]">
           {s.v}
         </dt>
 
@@ -200,7 +200,7 @@ export default function App() {
         aria-hidden
         className="absolute -bottom-[24px] -right-[24px] hidden bg-ink p-[20px] text-cream shadow-elegant md:block"
       >
-        <p className="font-display text-[18px] italic leading-[1.2]">
+        <p className="text-[18px] italic leading-[1.2]">
           "Comecei do zero e<br />já estou vendendo."
         </p>
         <p className="mt-[8px] text-[10px] font-semibold uppercase tracking-[2px] text-gold">
@@ -256,12 +256,12 @@ export default function App() {
       </span>
 
       {/* MOBILE TITLE */}
-      <h2 className="mt-[24px] font-display text-[34px] leading-[1.05] text-ink md:hidden">
+      <h2 className="mt-[24px] text-[34px] leading-[1.05] text-ink md:hidden">
         Você quer renda extra. Só não sabe por onde <em className="text-gold">começar</em>.
       </h2>
 
       {/* DESKTOP TITLE */}
-      <h2 className="hidden md:block mt-[24px] font-display text-[56px] leading-[1.05] text-ink">
+      <h2 className="hidden md:block mt-[24px] text-[56px] leading-[1.05] text-ink">
         Você quer renda extra. Só não sabe por onde <em className="text-gold">começar</em>.
       </h2>
 
@@ -293,7 +293,7 @@ export default function App() {
             key={p}
             className="flex items-center gap-[24px] bg-cream py-[20px] px-[16px]"
           >
-            <span className="font-display text-[12px] text-gold">
+            <span className="text-[12px] text-gold">
               0{i + 1}
             </span>
 
@@ -341,12 +341,12 @@ export default function App() {
       </span>
 
       {/* MOBILE TITLE */}
-      <h2 className="mt-[24px] font-display text-[34px] leading-[1.05] text-cream md:hidden">
+      <h2 className="mt-[24px] text-[34px] leading-[1.05] text-cream md:hidden">
         Kits prontos, alta demanda. Primeiras vendas em <em className="text-gold">dias</em>.
       </h2>
 
       {/* DESKTOP TITLE */}
-      <h2 className="hidden md:block mt-[24px] font-display text-[56px] leading-[1.05] text-cream">
+      <h2 className="hidden md:block mt-[24px] text-[56px] leading-[1.05] text-cream">
         Kits prontos, alta demanda. Primeiras vendas em <em className="text-gold">dias</em>.
       </h2>
 
@@ -373,7 +373,7 @@ export default function App() {
             key={b.t}
             className="border-t border-cream/15 pt-[16px]"
           >
-            <p className="font-display text-[20px] text-gold">
+            <p className="text-[20px] text-gold">
               {b.t}
             </p>
 
@@ -405,12 +405,12 @@ export default function App() {
         </span>
 
         {/* MOBILE TITLE */}
-        <h2 className="mt-[24px] font-display text-[34px] leading-[1.05] text-ink md:hidden">
+        <h2 className="mt-[24px] text-[34px] leading-[1.05] text-ink md:hidden">
           Em quatro passos, você começa a <em className="text-gold">lucrar</em>.
         </h2>
 
         {/* DESKTOP TITLE */}
-        <h2 className="hidden md:block mt-[24px] font-display text-[56px] leading-[1.05] text-ink">
+        <h2 className="hidden md:block mt-[24px] text-[56px] leading-[1.05] text-ink">
           Em quatro passos, você começa a <em className="text-gold">lucrar</em>.
         </h2>
 
@@ -437,17 +437,17 @@ export default function App() {
           className="bg-cream p-[28px] md:p-[32px]"
         >
 
-          <span className="font-display text-[32px] md:text-[40px] text-gold">
+          <span className="text-[32px] md:text-[40px] text-gold">
             0{i + 1}
           </span>
 
           {/* MOBILE TITLE */}
-          <p className="mt-[20px] font-display text-[20px] text-ink md:hidden">
+          <p className="mt-[20px] text-[20px] text-ink md:hidden">
             {s.t}
           </p>
 
           {/* DESKTOP TITLE */}
-          <p className="hidden md:block mt-[24px] font-display text-[24px] text-ink">
+          <p className="hidden md:block mt-[24px] text-[24px] text-ink">
             {s.t}
           </p>
 
@@ -476,12 +476,12 @@ export default function App() {
       </span>
 
       {/* MOBILE TITLE */}
-      <h2 className="mt-[20px] font-display text-[28px] leading-[1.1] text-ink md:hidden">
+      <h2 className="mt-[20px] text-[28px] leading-[1.1] text-ink md:hidden">
         Histórias reais de quem deu o primeiro passo.
       </h2>
 
       {/* DESKTOP TITLE */}
-      <h2 className="hidden md:block mt-[20px] font-display text-[48px] leading-[1.1] text-ink">
+      <h2 className="hidden md:block mt-[20px] text-[48px] leading-[1.1] text-ink">
         Histórias reais de quem deu o primeiro passo.
       </h2>
 
@@ -518,13 +518,13 @@ export default function App() {
         >
 
           <div
-            className="font-display text-[44px] leading-none text-gold"
+            className="text-[44px] leading-none text-gold"
             aria-hidden
           >
             "
           </div>
 
-          <blockquote className="mt-[8px] font-display text-[18px] md:text-[22px] leading-[1.4] text-ink/90">
+          <blockquote className="mt-[8px] text-[18px] md:text-[22px] leading-[1.4] text-ink/90">
             {d.text}
           </blockquote>
 
@@ -561,12 +561,12 @@ export default function App() {
       </span>
 
       {/* MOBILE TITLE */}
-      <h2 className="mt-[24px] font-display text-[34px] leading-[1.05] text-cream md:hidden">
+      <h2 className="mt-[24px] text-[34px] leading-[1.05] text-cream md:hidden">
         Kit inicial acessível.<br />Estoque pronto. <em className="text-gold">Suporte incluso.</em>
       </h2>
 
       {/* DESKTOP TITLE */}
-      <h2 className="hidden md:block mt-[24px] font-display text-[56px] leading-[1.05] text-cream">
+      <h2 className="hidden md:block mt-[24px] text-[56px] leading-[1.05] text-cream">
         Kit inicial acessível.<br />Estoque pronto. <em className="text-gold">Suporte incluso.</em>
       </h2>
 
@@ -607,7 +607,7 @@ export default function App() {
           className="flex items-center gap-[24px] bg-ink py-[20px] px-[16px]"
         >
 
-          <span className="font-display text-[12px] text-gold">
+          <span className="text-[12px] text-gold">
             0{i + 1}
           </span>
 
@@ -637,12 +637,12 @@ export default function App() {
       </span>
 
       {/* MOBILE TITLE */}
-      <h2 className="mt-[24px] font-display text-[34px] leading-[1.05] text-ink md:hidden">
+      <h2 className="mt-[24px] text-[34px] leading-[1.05] text-ink md:hidden">
         Antes de você começar.
       </h2>
 
       {/* DESKTOP TITLE */}
-      <h2 className="hidden md:block mt-[24px] font-display text-[56px] leading-[1.05] text-ink">
+      <h2 className="hidden md:block mt-[24px] text-[56px] leading-[1.05] text-ink">
         Antes de você começar.
       </h2>
 
@@ -688,7 +688,7 @@ export default function App() {
           className="group border-b border-ink/15 py-[20px]"
         >
 
-          <summary className="flex cursor-pointer list-none items-center justify-between gap-[24px] font-display text-[18px] md:text-[22px] text-ink">
+          <summary className="flex cursor-pointer list-none items-center justify-between gap-[24px] text-[18px] md:text-[22px] text-ink">
 
             <span>{f.q}</span>
 
@@ -727,12 +727,12 @@ export default function App() {
     </span>
 
     {/* MOBILE TITLE */}
-    <h2 className="mx-auto mt-[24px] max-w-[360px] font-display text-[34px] leading-[1.02] text-ink md:hidden">
+    <h2 className="mx-auto mt-[24px] max-w-[360px] text-[34px] leading-[1.02] text-ink md:hidden">
       Sua primeira venda pode ser <em className="text-gold">esta semana</em>.
     </h2>
 
     {/* DESKTOP TITLE */}
-    <h2 className="hidden md:block mx-auto mt-[24px] max-w-[960px] font-display text-[64px] leading-[1.02] text-ink">
+    <h2 className="hidden md:block mx-auto mt-[24px] max-w-[960px] text-[64px] leading-[1.02] text-ink">
       Sua primeira venda pode ser <em className="text-gold">esta semana</em>.
     </h2>
 
