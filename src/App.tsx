@@ -243,68 +243,70 @@ export default function App() {
 </header>
 
       {/* PROBLEMA */}
-<section className="bg-cream py-[96px] md:py-[128px]">
+<section className="relative bg-cream py-[96px] md:py-[140px] overflow-hidden">
 
-  <div className="container-lp grid gap-[64px] md:grid-cols-[1fr_1.3fr] md:gap-[96px]">
+  <div className="container-lp grid gap-[64px] md:grid-cols-[1fr_1.35fr] md:gap-[100px]">
 
     {/* COLUNA ESQUERDA */}
     <div>
 
-      <span className="eyebrow flex items-center gap-[12px] text-[12px] text-ink/60 tracking-[1px]">
-        <span className="h-px w-[32px] bg-gold" aria-hidden />
+      <span className="inline-flex items-center gap-[12px] text-[12px] text-ink/60 tracking-[0.2em] uppercase">
+        <span className="h-px w-[36px] bg-gold" aria-hidden />
         01 — O dilema
       </span>
 
-      {/* MOBILE TITLE */}
-      <h2 className="mt-[24px] text-[34px] leading-[1.05] text-ink md:hidden">
-        Você quer renda extra. Só não sabe por onde <em className="text-gold">começar</em>.
-      </h2>
-
-      {/* DESKTOP TITLE */}
-      <h2 className="hidden md:block mt-[24px] text-[56px] leading-[1.05] text-ink">
-        Você quer renda extra. Só não sabe por onde <em className="text-gold">começar</em>.
+      {/* TITLE */}
+      <h2 className="mt-[28px] text-[36px] leading-[1.05] text-ink md:text-[58px]">
+        Você quer renda extra. Só não sabe por onde
+        <br />
+        <em className="text-gold not-italic relative inline-block mt-[6px]">
+          começar
+          <span className="absolute -bottom-[6px] left-0 h-[3px] w-full bg-gold/30" />
+        </em>
+        .
       </h2>
 
     </div>
 
     {/* COLUNA DIREITA */}
-    <div className="md:pt-[8px]">
+    <div className="md:pt-[10px]">
 
-      {/* MOBILE TEXT */}
-      <p className="text-[16px] leading-[1.7] text-ink/70 md:hidden">
+      {/* TEXTO (VOLTOU PRA DIREITA) */}
+      <p className="text-[16px] leading-[1.75] text-ink/70 md:text-[18px] max-w-[620px]">
         A maioria desiste antes de tentar — por medo, falta de dinheiro ou por não saber o que vender. Faz sentido. Começar do zero é desconfortável.
       </p>
 
-      {/* DESKTOP TEXT */}
-      <p className="hidden md:block text-[18px] leading-[1.7] text-ink/70 max-w-[620px]">
-        A maioria desiste antes de tentar — por medo, falta de dinheiro ou por não saber o que vender. Faz sentido. Começar do zero é desconfortável.
-      </p>
-
-      {/* LISTA */}
-      <ul className="mt-[40px] grid bg-ink/10">
+      {/* CARDS */}
+      <div className="mt-[44px] grid gap-[14px]">
 
         {[
           "Medo de não conseguir vender",
           "Pouco dinheiro para investir",
           "Não saber onde encontrar clientes",
           "Insegurança em começar algo novo",
-        ].map((p, i) => (
-          <li
-            key={p}
-            className="flex items-center gap-[24px] bg-cream py-[20px] px-[16px]"
+        ].map((item, i) => (
+          <div
+            key={item}
+            className="group flex items-center gap-[16px] rounded-[14px] border border-ink/10 bg-white/40 px-[18px] py-[16px] backdrop-blur-sm transition hover:border-gold/30 hover:bg-white/60"
           >
-            <span className="text-[12px] text-gold">
-              0{i + 1}
+            <span className="flex h-[28px] w-[28px] items-center justify-center rounded-full bg-gold/10 text-[12px] font-semibold text-gold">
+              {String(i + 1).padStart(2, "0")}
             </span>
 
-            <span className="text-[16px] md:text-[18px] text-ink/80">
-              {p}
+            <span className="text-[15px] md:text-[17px] text-ink/80 group-hover:text-ink transition">
+              {item}
             </span>
-          </li>
+
+            <span className="ml-auto text-gold/0 group-hover:text-gold transition">
+              →
+            </span>
+          </div>
         ))}
-      </ul>
+
+      </div>
 
     </div>
+
   </div>
 </section>
 
@@ -390,7 +392,10 @@ export default function App() {
 </section>
 
       {/* COMO FUNCIONA */}
-<section id="como-funciona" className="bg-cream py-[96px] md:py-[128px]">
+<section id="como-funciona" className="relative bg-cream py-[96px] md:py-[140px] overflow-hidden">
+
+  {/* glow suave */}
+  <div className="pointer-events-none absolute top-[-120px] left-1/2 h-[500px] w-[500px] -translate-x-1/2 rounded-full bg-gold/10 blur-[140px]" />
 
   <div className="container-lp">
 
@@ -399,32 +404,30 @@ export default function App() {
 
       <div>
 
-        <span className="eyebrow flex items-center gap-[12px] text-[12px] text-ink/60 tracking-[1px]">
-          <span className="h-px w-[32px] bg-gold" aria-hidden />
+        <span className="inline-flex items-center gap-[12px] text-[12px] text-ink/60 tracking-[0.2em] uppercase">
+          <span className="h-px w-[36px] bg-gold" aria-hidden />
           03 — Como funciona
         </span>
 
-        {/* MOBILE TITLE */}
-        <h2 className="mt-[24px] text-[34px] leading-[1.05] text-ink md:hidden">
-          Em quatro passos, você começa a <em className="text-gold">lucrar</em>.
-        </h2>
-
-        {/* DESKTOP TITLE */}
-        <h2 className="hidden md:block mt-[24px] text-[56px] leading-[1.05] text-ink">
-          Em quatro passos, você começa a <em className="text-gold">lucrar</em>.
+        <h2 className="mt-[28px] text-[36px] leading-[1.05] text-ink md:text-[58px]">
+          Em quatro passos, você começa a{" "}
+          <em className="text-gold not-italic relative inline-block">
+            lucrar
+            <span className="absolute -bottom-[6px] left-0 h-[3px] w-full bg-gold/30" />
+          </em>
+          .
         </h2>
 
       </div>
 
-      {/* SUBTEXT */}
-      <p className="max-w-[320px] text-[14px] leading-[1.6] text-ink/65 md:text-right md:max-w-[360px] md:text-[16px]">
+      <p className="max-w-[360px] text-[14px] leading-[1.7] text-ink/65 md:text-right md:text-[16px]">
         Um processo simples, pensado para quem nunca vendeu nada antes.
       </p>
 
     </div>
 
     {/* STEPS */}
-    <ol className="mt-[64px] grid gap-px bg-ink/10 md:grid-cols-4">
+    <ol className="mt-[64px] grid gap-[18px] md:grid-cols-4">
 
       {[
         { t: "Escolha seu kit", d: "Selecione o kit ideal para o seu bolso e perfil." },
@@ -434,26 +437,32 @@ export default function App() {
       ].map((s, i) => (
         <li
           key={s.t}
-          className="bg-cream p-[28px] md:p-[32px]"
+          className="group relative rounded-[18px] border border-ink/10 bg-white/40 p-[28px] backdrop-blur-sm transition hover:border-gold/30 hover:bg-white/60 md:p-[32px]"
         >
 
-          <span className="text-[32px] md:text-[40px] text-gold">
-            0{i + 1}
-          </span>
+          {/* número estilizado */}
+          <div className="flex items-center justify-between">
+            <span className="text-[42px] md:text-[48px] font-light text-gold/80">
+              {String(i + 1).padStart(2, "0")}
+            </span>
 
-          {/* MOBILE TITLE */}
-          <p className="mt-[20px] text-[20px] text-ink md:hidden">
+            <span className="text-gold/0 transition group-hover:text-gold">
+              →
+            </span>
+          </div>
+
+          {/* título */}
+          <h3 className="mt-[18px] text-[18px] md:text-[22px] text-ink font-medium leading-[1.2]">
             {s.t}
-          </p>
+          </h3>
 
-          {/* DESKTOP TITLE */}
-          <p className="hidden md:block mt-[24px] text-[24px] text-ink">
-            {s.t}
-          </p>
-
-          <p className="mt-[12px] text-[13px] md:text-[14px] leading-[1.7] text-ink/65">
+          {/* descrição */}
+          <p className="mt-[10px] text-[13px] md:text-[14px] leading-[1.7] text-ink/65">
             {s.d}
           </p>
+
+          {/* linha decorativa sutil */}
+          <div className="mt-[18px] h-px w-full bg-gradient-to-r from-gold/20 to-transparent" />
 
         </li>
       ))}
