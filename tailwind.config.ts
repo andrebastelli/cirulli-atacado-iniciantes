@@ -7,12 +7,12 @@ const config: Config = {
       colors: {
         cream: "#faf6ee",
         ink: "#171411",
-        gold: "#c79a4a",
-        "gold-soft": "#e8c98a",
+        primary: "#00aec2",
+        "primary-soft": "#6fd9e5",
       },
       fontFamily: {
-        sans: ["Inter", "system-ui", "sans-serif"],
-        display: ['"Playfair Display"', "Georgia", "serif"],
+        sans: ["Monteserrat"],
+        display: ["Monteserrat"],
       },
       boxShadow: {
         elegant: "0 30px 60px -30px rgba(23,20,17,0.35)",
