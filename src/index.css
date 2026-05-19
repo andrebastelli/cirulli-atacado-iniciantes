@@ -7,12 +7,12 @@
   body {
     background-color: #faf6ee;
     color: #171411;
-    font-family: "Inter", system-ui, sans-serif;
+    font-family: "Montserrat", sans-serif;
     -webkit-font-smoothing: antialiased;
     text-rendering: optimizeLegibility;
   }
   h1, h2, h3, h4 {
-    font-family: "Playfair Display", Georgia, serif;
+    font-family: "Montserrat", sans-serif;
     letter-spacing: -0.015em;
     font-weight: 500;
   }

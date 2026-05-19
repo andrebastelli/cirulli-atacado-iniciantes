@@ -11,8 +11,8 @@ const config: Config = {
         azul: "#007c8a",
       },
       fontFamily: {
-        sans: ["Monteserrat"],
-        display: ["Monteserrat"],
+        sans: ["Montserrat"],
+        display: ["Montserrat"],
       },
       boxShadow: {
         elegant: "0 30px 60px -30px rgba(23,20,17,0.35)",
