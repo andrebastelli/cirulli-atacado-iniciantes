@@ -6,13 +6,13 @@ const config: Config = {
     extend: {
       colors: {
         cream: "#faf6ee",
-        ink: "#171411",
-        gold: "#c79a4a",
-        "gold-soft": "#e8c98a",
+        ink: "#12343a",
+        gold: "#00aec2",
+        azul: "#007c8a",
       },
       fontFamily: {
-        sans: ["Inter", "system-ui", "sans-serif"],
-        display: ['"Playfair Display"', "Georgia", "serif"],
+        sans: ["Monteserrat"],
+        display: ["Monteserrat"],
       },
       boxShadow: {
         elegant: "0 30px 60px -30px rgba(23,20,17,0.35)",

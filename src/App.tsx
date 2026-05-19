@@ -8,7 +8,7 @@ const SITE_URL =
   (import.meta.env.VITE_SITE_URL as string) ||
   "https://www.atacadocirulli.com.br";
 
-function CTA({
+function CTA({ 
   children,
   variant = "gold",
   ariaLabel,
@@ -45,15 +45,12 @@ export default function App() {
             src="/logo-cirulli.png"
             alt="Atacado Cirulli"
             className="h-14 md:h-16 w-auto object-contain"
-            style={{
-              filter: "brightness(0) saturate(100%)",
-            }}
           />
           <a
             href={WHATSAPP_URL}
             target="_blank"
             rel="noopener noreferrer"
-            className="hidden border border-ink/20 px-5 py-2 text-xs font-semibold uppercase tracking-[0.18em] text-ink transition hover:bg-ink hover:text-cream md:inline-block"
+            className="hidden border border-gold/20 px-5 py-2 text-xs font-semibold uppercase tracking-[0.18em] text-gold transition hover:bg-ink hover:text-cream md:inline-block"
             aria-label="Falar no WhatsApp"
           >
             WhatsApp
@@ -166,7 +163,7 @@ export default function App() {
           <div className="relative order-2 md:order-1">
             <div aria-hidden className="absolute -right-6 -top-6 h-32 w-32 border border-gold/60" />
             <img
-              src="/kit-detail.jpg"
+              src="/kit-semijoias.jpg"
               alt="Kit de semijoias com anéis e brincos em seda dourada"
               width={1024}
               height={1024}
@@ -353,9 +350,6 @@ export default function App() {
               src="/logo-cirulli.png"
               alt="Atacado Cirulli"
               className="h-14 w-auto object-contain"
-              style={{
-                filter: "brightness(0) invert(1)",
-              }}
             />
             <span className="h-px w-8 bg-cream/30" aria-hidden />
             <span className="text-xs uppercase tracking-[0.2em] text-cream/60">Semijoias no atacado</span>
