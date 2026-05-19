@@ -166,7 +166,7 @@ export default function App() {
           <div className="relative order-2 md:order-1">
             <div aria-hidden className="absolute -right-6 -top-6 h-32 w-32 border border-gold/60" />
             <img
-              src="/kit-detail.jpg"
+              src="/kit-semijoia.jpg"
               alt="Kit de semijoias com anéis e brincos em seda dourada"
               width={1024}
               height={1024}
