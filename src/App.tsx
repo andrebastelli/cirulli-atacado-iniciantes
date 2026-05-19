@@ -42,10 +42,10 @@ export default function App() {
       <nav aria-label="Principal" className="fixed left-0 right-0 top-0 z-50 bg-cream/80 backdrop-blur-md border-b border-ink/10">
         <div className="container-lp flex items-center justify-between py-6">
           <img
-            src="/logo-cirulli.png"
-            alt="Atacado Cirulli"
-            className="h-14 md:h-16 w-auto object-contain"
-          />
+  src="/logo-cirulli.png"
+  alt="Atacado Cirulli"
+  className="h-[75px] md:h-[100px] w-auto object-contain"
+/>
           <a
   href={WHATSAPP_URL}
   target="_blank"
@@ -762,10 +762,10 @@ export default function App() {
     <div className="flex flex-col items-center gap-[12px] md:flex-row md:gap-[12px]">
 
       <img
-        src="/logo-cirulli.png"
-        alt="Atacado Cirulli"
-        className="h-[56px] w-auto object-contain"
-      />
+  src="/logo-cirulli.png"
+  alt="Atacado Cirulli"
+  className="h-[75px] md:h-[75px] w-auto object-contain"
+/>
 
       {/* separator desktop only */}
       <span className="hidden md:block h-px w-[32px] bg-cream/30" aria-hidden />
@@ -797,7 +797,7 @@ export default function App() {
   </div>
 </footer>
 
-      {/* Floating WhatsApp */}
+      {/* WhatsApp */}
       <a
         href={WHATSAPP_URL}
         target="_blank"
