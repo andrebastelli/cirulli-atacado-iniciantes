@@ -39,8 +39,8 @@ export default function App() {
   return (
     <main className="overflow-x-hidden bg-cream text-ink">
       {/* NAV */}
-      <nav aria-label="Principal" className="fixed left-0 right-0 top-0 z-50 bg-cream/80 backdrop-blur-md border-b border-ink/10">
-        <div className="container-lp flex items-center justify-between py-6">
+      <nav className="fixed left-0 right-0 top-0 z-50 h-[96px] md:h-[120px] bg-cream/80 backdrop-blur-md border-b border-ink/10">
+        <div className="container-lp flex items-center justify-between h-full">
           <img
   src="/logo-cirulli.png"
   alt="Atacado Cirulli"
@@ -79,7 +79,7 @@ export default function App() {
       </nav>
 
       {/* HERO */}
-<header className="relative min-h-screen bg-cream">
+<header className="relative min-h-screen bg-cream pt-[25px] md:pt-[50px]">
 
   <div className="container-lp grid min-h-screen items-center gap-[40px] pt-[112px] pb-[64px] md:grid-cols-[1.05fr_1fr] md:gap-[60px] md:pt-[128px] md:pb-[96px]">
 
