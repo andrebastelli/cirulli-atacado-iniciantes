@@ -108,7 +108,7 @@ export default function App() {
               height={1600}
               fetchPriority="high"
               decoding="async"
-              className="relative aspect-[3/4] w-full object-cover shadow-elegant"
+              className="relative w-full object-cover shadow-elegant"
             />
             <div aria-hidden className="absolute -bottom-6 -right-6 hidden bg-ink p-5 text-cream shadow-elegant md:block">
               <p className="font-display text-lg italic">"Comecei do zero e<br />já estou vendendo."</p>
