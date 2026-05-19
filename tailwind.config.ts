@@ -6,9 +6,9 @@ const config: Config = {
     extend: {
       colors: {
         cream: "#faf6ee",
-        ink: "#171411",
+        ink: "#12343a",
         gold: "#00aec2",
-        "primary-soft": "#6fd9e5",
+        azul: "#007c8a",
       },
       fontFamily: {
         sans: ["Monteserrat"],
