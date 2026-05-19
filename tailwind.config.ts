@@ -7,7 +7,7 @@ const config: Config = {
       colors: {
         cream: "#faf6ee",
         ink: "#171411",
-        primary: "#00aec2",
+        gold: "#00aec2",
         "primary-soft": "#6fd9e5",
       },
       fontFamily: {
