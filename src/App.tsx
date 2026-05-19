@@ -8,7 +8,7 @@ const SITE_URL =
   (import.meta.env.VITE_SITE_URL as string) ||
   "https://www.atacadocirulli.com.br";
 
-function CTA({
+function CTA({ 
   children,
   variant = "gold",
   ariaLabel,
