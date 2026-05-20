@@ -154,7 +154,7 @@ export default function App() {
 
     mt-[18px] md:mt-0
 
-    rounded-full border border-ink/10 bg-ink/[0.04]
+    border border-ink/10 bg-ink/[0.04]
     px-[18px] py-[12px]
     text-[12px] font-bold uppercase tracking-[1.8px]
     text-ink/70 backdrop-blur-md
