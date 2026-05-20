@@ -115,16 +115,72 @@ export default function App() {
         Kits prontos no atacado e suporte real para suas primeiras vendas acontecerem em dias — não em meses.
       </p>
 
-      <div className="mt-[40px] flex flex-wrap items-center gap-[20px]">
-        <CTA variant="gold">Quero começar agora</CTA>
+      <div className="mt-[40px] flex flex-col items-start gap-[14px] sm:flex-row sm:items-center sm:gap-[20px]">
+  <a
+    href="#comprar"
+    className="
+      group relative inline-flex items-center justify-center
+      overflow-hidden 
+      bg-gold px-[28px] py-[15px]
+      text-[13px] font-bold uppercase tracking-[1.6px]
+      text-ink
+      shadow-[0_14px_35px_rgba(0,0,0,0.22)]
+      transition-all duration-300
+      hover:scale-[1.03]
+      hover:shadow-[0_18px_45px_rgba(0,0,0,0.30)]
+    "
+  >
+    <span className="relative z-10 flex items-center gap-[10px]">
+      Quero começar agora
+      <span className="transition-transform duration-300 group-hover:translate-x-[4px]">
+        →
+      </span>
+    </span>
 
-        <a
-          href="#como-funciona"
-          className="text-[12px] font-semibold uppercase tracking-[2px] text-ink/70 underline-offset-8 hover:text-ink hover:underline"
-        >
-          Ver como funciona
-        </a>
-      </div>
+    <span
+      className="
+        absolute inset-0 -translate-x-full
+        bg-gradient-to-r from-transparent via-white/30 to-transparent
+        transition-transform duration-700
+        group-hover:translate-x-full
+      "
+    />
+  </a>
+
+  <a
+  href="#como-funciona"
+  className="
+    group inline-flex items-center justify-center gap-[10px]
+    rounded-full border border-ink/10 bg-ink/[0.04]
+    px-[18px] py-[12px]
+    text-[12px] font-bold uppercase tracking-[1.8px]
+    text-ink/70 backdrop-blur-md
+    transition-all duration-300
+
+    hover:border-gold/40
+    hover:bg-gold/10
+    hover:text-ink
+    hover:shadow-[0_10px_25px_rgba(0,0,0,0.10)]
+  "
+>
+  <span>Ver como funciona</span>
+
+  <span
+    className="
+      flex h-[26px] w-[26px] items-center justify-center
+      rounded-full bg-gold/15
+      text-[14px] text-gold
+      transition-all duration-300
+
+      group-hover:bg-gold
+      group-hover:text-ink
+      group-hover:translate-x-[4px]
+    "
+  >
+    →
+  </span>
+</a>
+</div>
 
       <dl className="mt-[56px] border-t border-ink/10 pt-[24px]">
 
@@ -665,7 +721,62 @@ export default function App() {
 
       <div className="mt-[40px]">
 
-        <CTA variant="ink">Começar agora</CTA>
+        <div className="mt-[40px] flex flex-col items-start gap-[14px] sm:flex-row sm:items-center sm:gap-[20px]">
+  <a
+    href="#comprar"
+    className="
+      group relative inline-flex items-center justify-center
+      overflow-hidden
+      bg-gold px-[28px] py-[15px]
+      text-[13px] font-bold uppercase tracking-[1.6px]
+      text-ink
+      shadow-[0_14px_35px_rgba(0,0,0,0.22)]
+      transition-all duration-300
+      hover:scale-[1.03]
+      hover:shadow-[0_18px_45px_rgba(0,0,0,0.30)]
+    "
+  >
+    <span className="relative z-10 flex items-center gap-[10px]">
+      Quero começar agora
+      <span className="transition-transform duration-300 group-hover:translate-x-[4px]">
+        →
+      </span>
+    </span>
+
+    <span
+      className="
+        absolute inset-0 -translate-x-full
+        bg-gradient-to-r from-transparent via-white/30 to-transparent
+        transition-transform duration-700
+        group-hover:translate-x-full
+      "
+    />
+  </a>
+
+  <a
+    href="#como-funciona"
+    className="
+      group inline-flex items-center gap-[8px]
+      text-[12px] font-semibold uppercase tracking-[2px]
+      text-ink/65 transition-all duration-300
+      hover:text-ink
+    "
+  >
+    Ver como funciona
+
+    <span
+      className="
+        flex h-[28px] w-[28px] items-center justify-center
+        rounded-full border border-ink/10 bg-ink/5
+        text-[14px] transition-all duration-300
+        group-hover:border-gold/40 group-hover:bg-gold/10
+        group-hover:translate-x-[3px]
+      "
+    >
+      →
+    </span>
+  </a>
+</div>
 
         <p className="mt-[16px] text-[11px] uppercase tracking-[2px] text-cream/55">
           Atendimento direto no WhatsApp · Sem compromisso
@@ -877,7 +988,46 @@ export default function App() {
     </p>
 
     <div className="mt-[48px] flex justify-center">
-      <CTA variant="gold">Quero começar agora</CTA>
+      <div className="mt-[40px] flex flex-col items-start gap-[14px] sm:flex-row sm:items-center sm:gap-[20px]">
+  <a
+  href="#comprar"
+  className="
+    group relative inline-flex items-center justify-center
+    overflow-hidden
+
+    bg-gold text-ink
+    px-[24px] py-[16px]
+    text-[13px] tracking-[1.3px]
+
+    md:px-[35px] md:py-[20px]
+    md:text-[15px] md:tracking-[1.6px]
+
+    font-bold uppercase
+    shadow-[0_12px_28px_rgba(0,0,0,0.20)]
+    transition-all duration-300
+
+    hover:scale-[1.03]
+    hover:shadow-[0_18px_45px_rgba(0,0,0,0.30)]
+  "
+>
+  <span className="relative z-10 flex items-center gap-[8px] md:gap-[10px]">
+    Quero começar agora
+
+    <span className="transition-transform duration-300 group-hover:translate-x-[4px]">
+      →
+    </span>
+  </span>
+
+  <span
+    className="
+      absolute inset-0 -translate-x-full
+      bg-gradient-to-r from-transparent via-white/30 to-transparent
+      transition-transform duration-700
+      group-hover:translate-x-full
+    "
+  />
+</a>
+</div>
     </div>
 
   </div>
