@@ -128,32 +128,8 @@ export default function App() {
 
       <dl className="mt-[56px] border-t border-ink/10 pt-[24px]">
 
-  {/* MOBILE: 2x2 (mais confortável) */}
-  <div className="grid grid-cols-2 gap-[20px] md:hidden">
-
-    {[
-      { v: "2x–3x", l: "Margem" },
-      { v: "Dias", l: "1ª venda" },
-      { v: "+248", l: "Iniciantes" },
-    ].map((s) => (
-      <div key={s.l} className="text-center">
-
-        <dt className="text-[26px] text-ink leading-[1]">
-          {s.v}
-        </dt>
-
-        <dd className="mt-[6px] text-[11px] font-semibold uppercase tracking-[2px] text-ink/60">
-          {s.l}
-        </dd>
-
-      </div>
-    ))}
-
-  </div>
-
-  {/* DESKTOP: métricas premium */}
-<div className="hidden md:grid max-w-[420px] grid-cols-3 gap-[18px]">
-
+ {/* MÉTRICAS RESPONSIVAS */}
+<div className="grid w-full max-w-[420px] grid-cols-3 gap-[10px] md:gap-[18px]">
   {[
     { v: "2x–3x", l: "Margem" },
     { v: "Dias", l: "1ª venda" },
@@ -161,31 +137,53 @@ export default function App() {
   ].map((s) => (
     <div
       key={s.l}
-      className="group relative rounded-[14px] border border-ink/10
-                 bg-ink/5 px-[14px] py-[16px] text-center
-                 backdrop-blur-md transition-all duration-300
-                 hover:border-gold/30 hover:bg-ink/10
-                 hover:translate-y-[-2px]"
-    >
+      className="
+        group relative flex min-h-[118px] flex-col items-center justify-center
+        rounded-[14px]
+        border border-ink/10 bg-ink/5
+        px-[6px] py-[14px]
+        text-center backdrop-blur-md
+        transition-all duration-300
 
+        md:min-h-auto md:px-[14px] md:py-[16px]
+
+        hover:border-gold/30 hover:bg-ink/10
+        hover:translate-y-[-2px]
+      "
+    >
       {/* glow no hover */}
       <div className="absolute inset-0 opacity-0 transition group-hover:opacity-100">
         <div className="absolute -top-[40px] left-1/2 h-[80px] w-[80px] -translate-x-1/2 rounded-full bg-gold/10 blur-2xl" />
       </div>
 
-      <dt className="relative text-[28px] md:text-[32px] font-light text-ink leading-[1] group-hover:text-gold transition">
+      <dt
+        className="
+          relative whitespace-nowrap
+          text-[24px] md:text-[32px]
+          font-light leading-[1]
+          text-ink transition
+          group-hover:text-gold
+        "
+      >
         {s.v}
       </dt>
 
-      <dd className="relative mt-[6px] text-[10px] md:text-[11px]
-                     font-semibold uppercase tracking-[2px]
-                     text-ink/60 group-hover:text-ink/80 transition">
+      <dd
+        className="
+          relative mt-[10px]
+          whitespace-nowrap
+          text-[8.5px] md:text-[11px]
+          font-semibold uppercase
+          tracking-[1.6px] md:tracking-[2px]
+          text-ink/60 transition
+          group-hover:text-ink/80
+        "
+      >
         {s.l}
       </dd>
 
       {/* linha de destaque */}
-      <div className="mt-[10px] h-[1px] w-0 bg-gold/40 transition-all duration-300 group-hover:w-full mx-auto" />
-
+      <div className="mx-auto mt-[12px] h-[1px] w-[18px] bg-gold/30 transition-all duration-300 group-hover:w-full" />
     </div>
   ))}
 </div>
@@ -294,7 +292,6 @@ export default function App() {
 
       {/* CARDS */}
 <div className="mt-[44px] grid gap-[12px]">
-
   {[
     "Medo de não conseguir vender",
     "Pouco dinheiro para investir",
@@ -303,32 +300,62 @@ export default function App() {
   ].map((item, i) => (
     <div
       key={item}
-      className="group relative flex items-center gap-[14px]
-                 rounded-[16px] border border-ink/10 bg-ink/5
-                 px-[18px] py-[16px] backdrop-blur-md
-                 transition-all duration-300
-                 hover:border-gold/30 hover:bg-ink/10
-                 hover:translate-y-[-2px]
-                 hover:shadow-[0_15px_40px_rgba(0,0,0,0.18)]"
-    >
+      className="
+        group relative flex w-full items-center justify-start
+        gap-[14px] md:gap-[18px]
+        rounded-[16px] border border-ink/10 bg-ink/5
+        px-[18px] py-[16px]
+        backdrop-blur-md
+        transition-all duration-300
 
+        hover:border-gold/30 hover:bg-ink/10
+        hover:translate-y-[-2px]
+        hover:shadow-[0_15px_40px_rgba(0,0,0,0.18)]
+      "
+    >
       {/* número */}
-      <span className="flex h-[30px] w-[30px] items-center justify-center rounded-full
-                       bg-gold/10 text-[12px] font-semibold text-gold
-                       group-hover:bg-gold group-hover:text-ink transition">
+      <span
+        className="
+          flex aspect-square h-[38px] w-[38px] shrink-0
+          items-center justify-center rounded-full
+          bg-gold/10 text-[12px] font-semibold text-gold
+          transition
+
+          md:h-[30px] md:w-[30px]
+
+          group-hover:bg-gold group-hover:text-ink
+        "
+      >
         {String(i + 1).padStart(2, "0")}
       </span>
 
       {/* texto */}
-      <span className="text-[15px] md:text-[16px] text-ink/75 group-hover:text-ink transition leading-[1.4]">
+      <span
+        className="
+          block min-w-0 flex-1 text-left
+          text-[17px] md:text-[16px]
+          leading-[1.45]
+          text-ink/75
+          transition
+
+          group-hover:text-ink
+        "
+      >
         {item}
       </span>
 
       {/* seta dinâmica */}
-      <span className="ml-auto text-gold/0 group-hover:text-gold transition-transform duration-300 group-hover:translate-x-[2px]">
+      <span
+        className="
+          ml-auto hidden shrink-0
+          text-gold/0 transition-transform duration-300
+          group-hover:translate-x-[2px] group-hover:text-gold
+
+          md:block
+        "
+      >
         →
       </span>
-
     </div>
   ))}
 </div>
@@ -650,7 +677,6 @@ export default function App() {
 
     {/* LISTA */}
 <ul className="grid gap-[12px] md:gap-[16px]">
-
   {[
     "Kit completo com peças de alta saída",
     "Preço de atacado real",
@@ -660,28 +686,51 @@ export default function App() {
   ].map((b, i) => (
     <li
       key={b}
-      className="group relative flex items-start gap-[16px] md:gap-[20px] rounded-[16px]
-                 border border-cream/10 bg-ink/80 px-[18px] py-[18px]
-                 backdrop-blur-md transition-all duration-300
-                 hover:bg-ink hover:border-gold/40 hover:shadow-[0_10px_30px_rgba(0,0,0,0.35)]
-                 hover:translate-y-[-2px]"
-    >
+      className="
+        group relative flex w-full items-center justify-start
+        gap-[14px] md:gap-[20px]
+        rounded-[16px]
+        border border-cream/10 bg-ink/80
+        px-[18px] py-[18px]
+        backdrop-blur-md transition-all duration-300
 
+        hover:bg-ink hover:border-gold/40
+        hover:shadow-[0_10px_30px_rgba(0,0,0,0.35)]
+        hover:translate-y-[-2px]
+      "
+    >
       {/* indicador */}
       <div
-        className="flex h-[34px] w-[34px] items-center justify-center rounded-full
-                   bg-gold/10 text-gold text-[12px] font-semibold
-                   ring-1 ring-gold/20 group-hover:bg-gold group-hover:text-ink
-                   transition-all"
+        className="
+          flex aspect-square h-[42px] w-[42px] shrink-0
+          items-center justify-center rounded-full
+          bg-gold/10 text-gold
+          text-[12px] font-semibold
+          ring-1 ring-gold/20
+          transition-all
+
+          md:h-[34px] md:w-[34px]
+
+          group-hover:bg-gold group-hover:text-ink
+        "
       >
         {String(i + 1).padStart(2, "0")}
       </div>
 
       {/* texto */}
-      <span className="text-[15px] md:text-[17px] leading-[1.5] text-cream/90 group-hover:text-cream transition-colors">
+      <span
+        className="
+          block min-w-0 flex-1 text-left
+          text-[17px] md:text-[17px]
+          leading-[1.45]
+          text-cream/90
+          transition-colors
+
+          group-hover:text-cream
+        "
+      >
         {b}
       </span>
-
     </li>
   ))}
 </ul>
