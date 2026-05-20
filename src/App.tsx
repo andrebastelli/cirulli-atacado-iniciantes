@@ -151,6 +151,9 @@ export default function App() {
   href="#como-funciona"
   className="
     group inline-flex items-center justify-center gap-[10px]
+
+    mt-[18px] md:mt-0
+
     rounded-full border border-ink/10 bg-ink/[0.04]
     px-[18px] py-[12px]
     text-[12px] font-bold uppercase tracking-[1.8px]
