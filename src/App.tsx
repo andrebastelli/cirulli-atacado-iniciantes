@@ -115,64 +115,137 @@ export default function App() {
         Kits prontos no atacado e suporte real para suas primeiras vendas acontecerem em dias — não em meses.
       </p>
 
-      <div className="mt-[40px] flex flex-wrap items-center gap-[20px]">
-        <CTA variant="gold">Quero começar agora</CTA>
+      <div className="mt-[40px] flex flex-col items-start gap-[14px] sm:flex-row sm:items-center sm:gap-[20px]">
+  <a
+    href="#comprar"
+    className="
+      group relative inline-flex items-center justify-center
+      overflow-hidden 
+      bg-gold px-[28px] py-[15px]
+      text-[13px] font-bold uppercase tracking-[1.6px]
+      text-ink
+      shadow-[0_14px_35px_rgba(0,0,0,0.22)]
+      transition-all duration-300
+      hover:scale-[1.03]
+      hover:shadow-[0_18px_45px_rgba(0,0,0,0.30)]
+    "
+  >
+    <span className="relative z-10 flex items-center gap-[10px]">
+      Quero começar agora
+      <span className="transition-transform duration-300 group-hover:translate-x-[4px]">
+        →
+      </span>
+    </span>
 
-        <a
-          href="#como-funciona"
-          className="text-[12px] font-semibold uppercase tracking-[2px] text-ink/70 underline-offset-8 hover:text-ink hover:underline"
-        >
-          Ver como funciona
-        </a>
-      </div>
+    <span
+      className="
+        absolute inset-0 -translate-x-full
+        bg-gradient-to-r from-transparent via-white/30 to-transparent
+        transition-transform duration-700
+        group-hover:translate-x-full
+      "
+    />
+  </a>
+
+  <a
+  href="#como-funciona"
+  className="
+    group inline-flex items-center justify-center gap-[10px]
+
+    mt-[18px] md:mt-0
+
+    border border-ink/10 bg-ink/[0.04]
+    px-[18px] py-[12px]
+    text-[12px] font-bold uppercase tracking-[1.8px]
+    text-ink/70 backdrop-blur-md
+    transition-all duration-300
+
+    hover:border-gold/40
+    hover:bg-gold/10
+    hover:text-ink
+    hover:shadow-[0_10px_25px_rgba(0,0,0,0.10)]
+  "
+>
+  <span>Ver como funciona</span>
+
+  <span
+    className="
+      flex h-[26px] w-[26px] items-center justify-center
+      rounded-full bg-gold/15
+      text-[14px] text-gold
+      transition-all duration-300
+
+      group-hover:bg-gold
+      group-hover:text-ink
+      group-hover:translate-x-[4px]
+    "
+  >
+    →
+  </span>
+</a>
+</div>
 
       <dl className="mt-[56px] border-t border-ink/10 pt-[24px]">
 
-  {/* MOBILE: 2x2 (mais confortável) */}
-  <div className="grid grid-cols-2 gap-[20px] md:hidden">
+ {/* MÉTRICAS RESPONSIVAS */}
+<div className="grid w-full max-w-[420px] grid-cols-3 gap-[10px] md:gap-[18px]">
+  {[
+    { v: "2x–3x", l: "Margem" },
+    { v: "Dias", l: "1ª venda" },
+    { v: "+248", l: "Iniciantes" },
+  ].map((s) => (
+    <div
+      key={s.l}
+      className="
+        group relative flex min-h-[118px] flex-col items-center justify-center
+        rounded-[14px]
+        border border-ink/10 bg-ink/5
+        px-[6px] py-[14px]
+        text-center backdrop-blur-md
+        transition-all duration-300
 
-    {[
-      { v: "2x–3x", l: "Margem" },
-      { v: "Dias", l: "1ª venda" },
-      { v: "+248", l: "Iniciantes" },
-    ].map((s) => (
-      <div key={s.l} className="text-center">
+        md:min-h-auto md:px-[14px] md:py-[16px]
 
-        <dt className="text-[26px] text-ink leading-[1]">
-          {s.v}
-        </dt>
-
-        <dd className="mt-[6px] text-[11px] font-semibold uppercase tracking-[2px] text-ink/60">
-          {s.l}
-        </dd>
-
+        hover:border-gold/30 hover:bg-ink/10
+        hover:translate-y-[-2px]
+      "
+    >
+      {/* glow no hover */}
+      <div className="absolute inset-0 opacity-0 transition group-hover:opacity-100">
+        <div className="absolute -top-[40px] left-1/2 h-[80px] w-[80px] -translate-x-1/2 rounded-full bg-gold/10 blur-2xl" />
       </div>
-    ))}
 
-  </div>
+      <dt
+        className="
+          relative whitespace-nowrap
+          text-[24px] md:text-[32px]
+          font-light leading-[1]
+          text-ink transition
+          group-hover:text-gold
+        "
+      >
+        {s.v}
+      </dt>
 
-  {/* DESKTOP: mantém 3 colunas */}
-  <div className="hidden md:grid max-w-[420px] grid-cols-3 gap-[24px]">
+      <dd
+        className="
+          relative mt-[10px]
+          whitespace-nowrap
+          text-[8.5px] md:text-[11px]
+          font-semibold uppercase
+          tracking-[1.6px] md:tracking-[2px]
+          text-ink/60 transition
+          group-hover:text-ink/80
+        "
+      >
+        {s.l}
+      </dd>
 
-    {[
-      { v: "2x–3x", l: "Margem" },
-      { v: "Dias", l: "1ª venda" },
-      { v: "+248", l: "Iniciantes" },
-    ].map((s) => (
-      <div key={s.l}>
-
-        <dt className="text-[32px] text-ink leading-[1]">
-          {s.v}
-        </dt>
-
-        <dd className="mt-[4px] text-[11px] font-semibold uppercase tracking-[2px] text-ink/60">
-          {s.l}
-        </dd>
-
-      </div>
-    ))}
-
-  </div>
+      {/* linha de destaque */}
+      <div className="mx-auto mt-[12px] h-[1px] w-[18px] bg-gold/30 transition-all duration-300 group-hover:w-full" />
+    </div>
+  ))}
+</div>
 
 </dl>
     </div>
@@ -277,33 +350,74 @@ export default function App() {
       </p>
 
       {/* CARDS */}
-      <div className="mt-[44px] grid gap-[14px]">
+<div className="mt-[44px] grid gap-[12px]">
+  {[
+    "Medo de não conseguir vender",
+    "Pouco dinheiro para investir",
+    "Não saber onde encontrar clientes",
+    "Insegurança em começar algo novo",
+  ].map((item, i) => (
+    <div
+      key={item}
+      className="
+        group relative flex w-full items-center justify-start
+        gap-[14px] md:gap-[18px]
+        rounded-[16px] border border-ink/10 bg-ink/5
+        px-[18px] py-[16px]
+        backdrop-blur-md
+        transition-all duration-300
 
-        {[
-          "Medo de não conseguir vender",
-          "Pouco dinheiro para investir",
-          "Não saber onde encontrar clientes",
-          "Insegurança em começar algo novo",
-        ].map((item, i) => (
-          <div
-            key={item}
-            className="group flex items-center gap-[16px] rounded-[14px] border border-ink/10 bg-white/40 px-[18px] py-[16px] backdrop-blur-sm transition hover:border-gold/30 hover:bg-white/60"
-          >
-            <span className="flex h-[28px] w-[28px] items-center justify-center rounded-full bg-gold/10 text-[12px] font-semibold text-gold">
-              {String(i + 1).padStart(2, "0")}
-            </span>
+        hover:border-gold/30 hover:bg-ink/10
+        hover:translate-y-[-2px]
+        hover:shadow-[0_15px_40px_rgba(0,0,0,0.18)]
+      "
+    >
+      {/* número */}
+      <span
+        className="
+          flex aspect-square h-[38px] w-[38px] shrink-0
+          items-center justify-center rounded-full
+          bg-gold/10 text-[12px] font-semibold text-gold
+          transition
 
-            <span className="text-[15px] md:text-[17px] text-ink/80 group-hover:text-ink transition">
-              {item}
-            </span>
+          md:h-[30px] md:w-[30px]
 
-            <span className="ml-auto text-gold/0 group-hover:text-gold transition">
-              →
-            </span>
-          </div>
-        ))}
+          group-hover:bg-gold group-hover:text-ink
+        "
+      >
+        {String(i + 1).padStart(2, "0")}
+      </span>
 
-      </div>
+      {/* texto */}
+      <span
+        className="
+          block min-w-0 flex-1 text-left
+          text-[17px] md:text-[16px]
+          leading-[1.45]
+          text-ink/75
+          transition
+
+          group-hover:text-ink
+        "
+      >
+        {item}
+      </span>
+
+      {/* seta dinâmica */}
+      <span
+        className="
+          ml-auto hidden shrink-0
+          text-gold/0 transition-transform duration-300
+          group-hover:translate-x-[2px] group-hover:text-gold
+
+          md:block
+        "
+      >
+        →
+      </span>
+    </div>
+  ))}
+</div>
 
     </div>
 
@@ -363,29 +477,39 @@ export default function App() {
       </p>
 
       {/* BENEFÍCIOS */}
-      <ul className="mt-[40px] grid gap-[16px] sm:grid-cols-2">
+<ul className="mt-[40px] grid gap-[14px] sm:grid-cols-2">
 
-        {[
-          { t: "Baixo investimento", d: "Kits pensados pra começar pequeno." },
-          { t: "Margem 2x – 3x", d: "Preço de atacado, venda no varejo." },
-          { t: "Flexibilidade", d: "WhatsApp, Insta ou presencial." },
-          { t: "Demanda contínua", d: "Vende o ano inteiro." },
-        ].map((b) => (
-          <li
-            key={b.t}
-            className="border-t border-cream/15 pt-[16px]"
-          >
-            <p className="text-[20px] text-gold">
-              {b.t}
-            </p>
+  {[
+    { t: "Baixo investimento", d: "Kits pensados pra começar pequeno." },
+    { t: "Margem 2x – 3x", d: "Preço de atacado, venda no varejo." },
+    { t: "Flexibilidade", d: "WhatsApp, Insta ou presencial." },
+    { t: "Demanda contínua", d: "Vende o ano inteiro." },
+  ].map((b) => (
+    <li
+      key={b.t}
+      className="group relative rounded-[16px] border border-cream/10 bg-cream/5
+                 p-[18px] md:p-[20px] backdrop-blur-sm
+                 transition-all duration-300
+                 hover:border-gold/30 hover:bg-cream/10 hover:translate-y-[-2px]
+                 hover:shadow-[0_15px_40px_rgba(0,0,0,0.2)]"
+    >
 
-            <p className="mt-[8px] text-[13px] leading-[1.6] text-cream/70">
-              {b.d}
-            </p>
-          </li>
-        ))}
+      {/* título */}
+      <p className="text-[16px] md:text-[18px] font-semibold text-gold">
+        {b.t}
+      </p>
 
-      </ul>
+      {/* descrição */}
+      <p className="mt-[6px] text-[13px] md:text-[14px] leading-[1.6] text-cream/70">
+        {b.d}
+      </p>
+
+      {/* micro destaque no hover */}
+      <div className="mt-[12px] h-[1px] w-0 bg-gold/40 transition-all duration-300 group-hover:w-full" />
+
+    </li>
+  ))}
+</ul>
 
     </div>
   </div>
@@ -427,47 +551,56 @@ export default function App() {
     </div>
 
     {/* STEPS */}
-    <ol className="mt-[64px] grid gap-[18px] md:grid-cols-4">
+<ol className="mt-[64px] grid gap-[16px] md:grid-cols-4">
 
-      {[
-        { t: "Escolha seu kit", d: "Selecione o kit ideal para o seu bolso e perfil." },
-        { t: "Receba as peças", d: "Enviamos com agilidade direto para sua casa." },
-        { t: "Comece a vender", d: "WhatsApp, Instagram, amigos e família." },
-        { t: "Reinvista e cresça", d: "Use o lucro para ampliar seu estoque." },
-      ].map((s, i) => (
-        <li
-          key={s.t}
-          className="group relative rounded-[18px] border border-ink/10 bg-white/40 p-[28px] backdrop-blur-sm transition hover:border-gold/30 hover:bg-white/60 md:p-[32px]"
-        >
+  {[
+    { t: "Escolha seu kit", d: "Selecione o kit ideal para o seu bolso e perfil." },
+    { t: "Receba as peças", d: "Enviamos com agilidade direto para sua casa." },
+    { t: "Comece a vender", d: "WhatsApp, Instagram, amigos e família." },
+    { t: "Reinvista e cresça", d: "Use o lucro para ampliar seu estoque." },
+  ].map((s, i) => (
+    <li
+      key={s.t}
+      className="group relative overflow-hidden rounded-[20px]
+                 border border-ink/10 bg-ink/5 p-[26px] md:p-[30px]
+                 backdrop-blur-md transition-all duration-300
+                 hover:border-gold/30 hover:bg-ink/10
+                 hover:translate-y-[-4px] hover:shadow-[0_20px_50px_rgba(0,0,0,0.18)]"
+    >
 
-          {/* número estilizado */}
-          <div className="flex items-center justify-between">
-            <span className="text-[42px] md:text-[48px] font-light text-gold/80">
-              {String(i + 1).padStart(2, "0")}
-            </span>
+      {/* glow de fundo no hover */}
+      <div className="absolute inset-0 opacity-0 transition group-hover:opacity-100">
+        <div className="absolute -top-[80px] -right-[80px] h-[160px] w-[160px] rounded-full bg-gold/10 blur-3xl" />
+      </div>
 
-            <span className="text-gold/0 transition group-hover:text-gold">
-              →
-            </span>
-          </div>
+      {/* topo */}
+      <div className="relative flex items-center justify-between">
+        <span className="text-[44px] md:text-[52px] font-light text-gold/70 leading-none">
+          {String(i + 1).padStart(2, "0")}
+        </span>
 
-          {/* título */}
-          <h3 className="mt-[18px] text-[18px] md:text-[22px] text-ink font-medium leading-[1.2]">
-            {s.t}
-          </h3>
+        {/* indicador de progresso */}
+        <span className="h-[8px] w-[8px] rounded-full bg-gold/40 group-hover:bg-gold transition" />
+      </div>
 
-          {/* descrição */}
-          <p className="mt-[10px] text-[13px] md:text-[14px] leading-[1.7] text-ink/65">
-            {s.d}
-          </p>
+      {/* título */}
+      <h3 className="relative mt-[18px] text-[18px] md:text-[20px] font-semibold text-ink leading-[1.2]">
+        {s.t}
+      </h3>
 
-          {/* linha decorativa sutil */}
-          <div className="mt-[18px] h-px w-full bg-gradient-to-r from-gold/20 to-transparent" />
+      {/* descrição */}
+      <p className="relative mt-[10px] text-[13px] md:text-[14px] leading-[1.7] text-ink/70">
+        {s.d}
+      </p>
 
-        </li>
-      ))}
+      {/* linha progressiva */}
+      <div className="relative mt-[18px] h-[2px] w-full bg-ink/5 overflow-hidden rounded-full">
+        <div className="h-full w-0 bg-gold transition-all duration-500 group-hover:w-full" />
+      </div>
 
-    </ol>
+    </li>
+  ))}
+</ol>
 
   </div>
 </section>
@@ -591,7 +724,62 @@ export default function App() {
 
       <div className="mt-[40px]">
 
-        <CTA variant="ink">Começar agora</CTA>
+        <div className="mt-[40px] flex flex-col items-start gap-[14px] sm:flex-row sm:items-center sm:gap-[20px]">
+  <a
+    href="#comprar"
+    className="
+      group relative inline-flex items-center justify-center
+      overflow-hidden
+      bg-gold px-[28px] py-[15px]
+      text-[13px] font-bold uppercase tracking-[1.6px]
+      text-ink
+      shadow-[0_14px_35px_rgba(0,0,0,0.22)]
+      transition-all duration-300
+      hover:scale-[1.03]
+      hover:shadow-[0_18px_45px_rgba(0,0,0,0.30)]
+    "
+  >
+    <span className="relative z-10 flex items-center gap-[10px]">
+      Quero começar agora
+      <span className="transition-transform duration-300 group-hover:translate-x-[4px]">
+        →
+      </span>
+    </span>
+
+    <span
+      className="
+        absolute inset-0 -translate-x-full
+        bg-gradient-to-r from-transparent via-white/30 to-transparent
+        transition-transform duration-700
+        group-hover:translate-x-full
+      "
+    />
+  </a>
+
+  <a
+    href="#como-funciona"
+    className="
+      group inline-flex items-center gap-[8px]
+      text-[12px] font-semibold uppercase tracking-[2px]
+      text-ink/65 transition-all duration-300
+      hover:text-ink
+    "
+  >
+    Ver como funciona
+
+    <span
+      className="
+        flex h-[28px] w-[28px] items-center justify-center
+        rounded-full border border-ink/10 bg-ink/5
+        text-[14px] transition-all duration-300
+        group-hover:border-gold/40 group-hover:bg-gold/10
+        group-hover:translate-x-[3px]
+      "
+    >
+      →
+    </span>
+  </a>
+</div>
 
         <p className="mt-[16px] text-[11px] uppercase tracking-[2px] text-cream/55">
           Atendimento direto no WhatsApp · Sem compromisso
@@ -602,32 +790,64 @@ export default function App() {
     </div>
 
     {/* LISTA */}
-    <ul className="grid gap-px bg-cream/10">
+<ul className="grid gap-[12px] md:gap-[16px]">
+  {[
+    "Kit completo com peças de alta saída",
+    "Preço de atacado real",
+    "Suporte para suas primeiras vendas",
+    "Material de divulgação pronto",
+    "Reposição rápida do estoque",
+  ].map((b, i) => (
+    <li
+      key={b}
+      className="
+        group relative flex w-full items-center justify-start
+        gap-[14px] md:gap-[20px]
+        rounded-[16px]
+        border border-cream/10 bg-ink/80
+        px-[18px] py-[18px]
+        backdrop-blur-md transition-all duration-300
 
-      {[
-        "Kit completo com peças de alta saída",
-        "Preço de atacado real",
-        "Suporte para suas primeiras vendas",
-        "Material de divulgação pronto",
-        "Reposição rápida do estoque",
-      ].map((b, i) => (
-        <li
-          key={b}
-          className="flex items-center gap-[24px] bg-ink py-[20px] px-[16px]"
-        >
+        hover:bg-ink hover:border-gold/40
+        hover:shadow-[0_10px_30px_rgba(0,0,0,0.35)]
+        hover:translate-y-[-2px]
+      "
+    >
+      {/* indicador */}
+      <div
+        className="
+          flex aspect-square h-[42px] w-[42px] shrink-0
+          items-center justify-center rounded-full
+          bg-gold/10 text-gold
+          text-[12px] font-semibold
+          ring-1 ring-gold/20
+          transition-all
 
-          <span className="text-[12px] text-gold">
-            0{i + 1}
-          </span>
+          md:h-[34px] md:w-[34px]
 
-          <span className="text-[15px] md:text-[17px] leading-[1.6] text-cream/90">
-            {b}
-          </span>
+          group-hover:bg-gold group-hover:text-ink
+        "
+      >
+        {String(i + 1).padStart(2, "0")}
+      </div>
 
-        </li>
-      ))}
+      {/* texto */}
+      <span
+        className="
+          block min-w-0 flex-1 text-left
+          text-[17px] md:text-[17px]
+          leading-[1.45]
+          text-cream/90
+          transition-colors
 
-    </ul>
+          group-hover:text-cream
+        "
+      >
+        {b}
+      </span>
+    </li>
+  ))}
+</ul>
 
   </div>
 </section>
@@ -668,56 +888,71 @@ export default function App() {
     </div>
 
     {/* FAQ LIST */}
-    <div>
+<div className="space-y-[12px] md:space-y-[16px]">
 
-      {[
-        {
-          q: "Preciso de experiência para revender?",
-          a: "Não. Nossos kits e o suporte foram pensados exatamente para quem está começando do zero.",
-        },
-        {
-          q: "Quanto preciso investir?",
-          a: "Temos kits iniciais acessíveis. Você escolhe o que cabe no seu bolso e começa pequeno.",
-        },
-        {
-          q: "Como eu vendo as peças?",
-          a: "WhatsApp, Instagram, indicação para amigos e família. Te orientamos passo a passo.",
-        },
-        {
-          q: "Onde encontrar clientes?",
-          a: "Começa no seu círculo próximo e nas redes sociais. A demanda por semijoias é alta o ano inteiro.",
-        },
-        {
-          q: "E se eu não conseguir vender?",
-          a: "Por isso o suporte é incluso: te ajudamos a destravar as primeiras vendas e ganhar confiança.",
-        },
-      ].map((f) => (
-        <details
-          key={f.q}
-          className="group border-b border-ink/15 py-[20px]"
+  {[
+    {
+      q: "Preciso de experiência para revender?",
+      a: "Não. Nossos kits e o suporte foram pensados exatamente para quem está começando do zero.",
+    },
+    {
+      q: "Quanto preciso investir?",
+      a: "Temos kits iniciais acessíveis. Você escolhe o que cabe no seu bolso e começa pequeno.",
+    },
+    {
+      q: "Como eu vendo as peças?",
+      a: "WhatsApp, Instagram, indicação para amigos e família. Te orientamos passo a passo.",
+    },
+    {
+      q: "Onde encontrar clientes?",
+      a: "Começa no seu círculo próximo e nas redes sociais. A demanda por semijoias é alta o ano inteiro.",
+    },
+    {
+      q: "E se eu não conseguir vender?",
+      a: "Por isso o suporte é incluso: te ajudamos a destravar as primeiras vendas e ganhar confiança.",
+    },
+  ].map((f) => (
+    <details
+      key={f.q}
+      className="group rounded-[16px] border border-ink/10 bg-ink/5 px-[20px] py-[18px]
+                 backdrop-blur-md transition-all duration-300
+                 hover:border-gold/30 hover:bg-ink/10 hover:shadow-[0_10px_30px_rgba(0,0,0,0.15)]"
+    >
+
+      <summary
+        className="flex cursor-pointer list-none items-center justify-between gap-[20px]
+                   text-[16px] md:text-[20px] font-medium text-ink"
+      >
+        <span className="leading-[1.4]">{f.q}</span>
+
+        {/* ícone moderno */}
+        <span
+          aria-hidden
+          className="relative flex h-[34px] w-[34px] items-center justify-center
+                     rounded-full border border-ink/20 text-ink/70
+                     transition-all duration-300
+                     group-open:rotate-45 group-open:border-gold group-open:bg-gold group-open:text-ink
+                     group-hover:border-gold/40"
         >
+          +
+        </span>
+      </summary>
 
-          <summary className="flex cursor-pointer list-none items-center justify-between gap-[24px] text-[18px] md:text-[22px] text-ink">
+      <div className="overflow-hidden">
+        <p
+          className="mt-[14px] max-w-[680px] text-[14px] md:text-[16px]
+                     leading-[1.7] text-ink/70"
+        >
+          {f.a}
+        </p>
+      </div>
 
-            <span>{f.q}</span>
+      {/* linha de destaque no open */}
+      <div className="mt-[14px] h-[1px] w-full bg-transparent group-open:bg-gold/20 transition-all" />
 
-            <span
-              aria-hidden
-              className="grid h-[32px] w-[32px] shrink-0 place-items-center border border-ink/30 text-ink transition group-open:rotate-45 group-open:border-gold group-open:bg-gold group-open:text-ink"
-            >
-              +
-            </span>
-
-          </summary>
-
-          <p className="mt-[16px] max-w-[640px] text-[14px] md:text-[16px] leading-[1.7] text-ink/70">
-            {f.a}
-          </p>
-
-        </details>
-      ))}
-
-    </div>
+    </details>
+  ))}
+</div>
   </div>
 </section>
 
@@ -756,7 +991,46 @@ export default function App() {
     </p>
 
     <div className="mt-[48px] flex justify-center">
-      <CTA variant="gold">Quero começar agora</CTA>
+      <div className="mt-[40px] flex flex-col items-start gap-[14px] sm:flex-row sm:items-center sm:gap-[20px]">
+  <a
+  href="#comprar"
+  className="
+    group relative inline-flex items-center justify-center
+    overflow-hidden
+
+    bg-gold text-ink
+    px-[24px] py-[16px]
+    text-[13px] tracking-[1.3px]
+
+    md:px-[35px] md:py-[20px]
+    md:text-[15px] md:tracking-[1.6px]
+
+    font-bold uppercase
+    shadow-[0_12px_28px_rgba(0,0,0,0.20)]
+    transition-all duration-300
+
+    hover:scale-[1.03]
+    hover:shadow-[0_18px_45px_rgba(0,0,0,0.30)]
+  "
+>
+  <span className="relative z-10 flex items-center gap-[8px] md:gap-[10px]">
+    Quero começar agora
+
+    <span className="transition-transform duration-300 group-hover:translate-x-[4px]">
+      →
+    </span>
+  </span>
+
+  <span
+    className="
+      absolute inset-0 -translate-x-full
+      bg-gradient-to-r from-transparent via-white/30 to-transparent
+      transition-transform duration-700
+      group-hover:translate-x-full
+    "
+  />
+</a>
+</div>
     </div>
 
   </div>
