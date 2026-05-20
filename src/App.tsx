@@ -151,28 +151,44 @@ export default function App() {
 
   </div>
 
-  {/* DESKTOP: mantém 3 colunas */}
-  <div className="hidden md:grid max-w-[420px] grid-cols-3 gap-[24px]">
+  {/* DESKTOP: métricas premium */}
+<div className="hidden md:grid max-w-[420px] grid-cols-3 gap-[18px]">
 
-    {[
-      { v: "2x–3x", l: "Margem" },
-      { v: "Dias", l: "1ª venda" },
-      { v: "+248", l: "Iniciantes" },
-    ].map((s) => (
-      <div key={s.l}>
+  {[
+    { v: "2x–3x", l: "Margem" },
+    { v: "Dias", l: "1ª venda" },
+    { v: "+248", l: "Iniciantes" },
+  ].map((s) => (
+    <div
+      key={s.l}
+      className="group relative rounded-[14px] border border-ink/10
+                 bg-ink/5 px-[14px] py-[16px] text-center
+                 backdrop-blur-md transition-all duration-300
+                 hover:border-gold/30 hover:bg-ink/10
+                 hover:translate-y-[-2px]"
+    >
 
-        <dt className="text-[32px] text-ink leading-[1]">
-          {s.v}
-        </dt>
-
-        <dd className="mt-[4px] text-[11px] font-semibold uppercase tracking-[2px] text-ink/60">
-          {s.l}
-        </dd>
-
+      {/* glow no hover */}
+      <div className="absolute inset-0 opacity-0 transition group-hover:opacity-100">
+        <div className="absolute -top-[40px] left-1/2 h-[80px] w-[80px] -translate-x-1/2 rounded-full bg-gold/10 blur-2xl" />
       </div>
-    ))}
 
-  </div>
+      <dt className="relative text-[28px] md:text-[32px] font-light text-ink leading-[1] group-hover:text-gold transition">
+        {s.v}
+      </dt>
+
+      <dd className="relative mt-[6px] text-[10px] md:text-[11px]
+                     font-semibold uppercase tracking-[2px]
+                     text-ink/60 group-hover:text-ink/80 transition">
+        {s.l}
+      </dd>
+
+      {/* linha de destaque */}
+      <div className="mt-[10px] h-[1px] w-0 bg-gold/40 transition-all duration-300 group-hover:w-full mx-auto" />
+
+    </div>
+  ))}
+</div>
 
 </dl>
     </div>
@@ -277,33 +293,45 @@ export default function App() {
       </p>
 
       {/* CARDS */}
-      <div className="mt-[44px] grid gap-[14px]">
+<div className="mt-[44px] grid gap-[12px]">
 
-        {[
-          "Medo de não conseguir vender",
-          "Pouco dinheiro para investir",
-          "Não saber onde encontrar clientes",
-          "Insegurança em começar algo novo",
-        ].map((item, i) => (
-          <div
-            key={item}
-            className="group flex items-center gap-[16px] rounded-[14px] border border-ink/10 bg-white/40 px-[18px] py-[16px] backdrop-blur-sm transition hover:border-gold/30 hover:bg-white/60"
-          >
-            <span className="flex h-[28px] w-[28px] items-center justify-center rounded-full bg-gold/10 text-[12px] font-semibold text-gold">
-              {String(i + 1).padStart(2, "0")}
-            </span>
+  {[
+    "Medo de não conseguir vender",
+    "Pouco dinheiro para investir",
+    "Não saber onde encontrar clientes",
+    "Insegurança em começar algo novo",
+  ].map((item, i) => (
+    <div
+      key={item}
+      className="group relative flex items-center gap-[14px]
+                 rounded-[16px] border border-ink/10 bg-ink/5
+                 px-[18px] py-[16px] backdrop-blur-md
+                 transition-all duration-300
+                 hover:border-gold/30 hover:bg-ink/10
+                 hover:translate-y-[-2px]
+                 hover:shadow-[0_15px_40px_rgba(0,0,0,0.18)]"
+    >
 
-            <span className="text-[15px] md:text-[17px] text-ink/80 group-hover:text-ink transition">
-              {item}
-            </span>
+      {/* número */}
+      <span className="flex h-[30px] w-[30px] items-center justify-center rounded-full
+                       bg-gold/10 text-[12px] font-semibold text-gold
+                       group-hover:bg-gold group-hover:text-ink transition">
+        {String(i + 1).padStart(2, "0")}
+      </span>
 
-            <span className="ml-auto text-gold/0 group-hover:text-gold transition">
-              →
-            </span>
-          </div>
-        ))}
+      {/* texto */}
+      <span className="text-[15px] md:text-[16px] text-ink/75 group-hover:text-ink transition leading-[1.4]">
+        {item}
+      </span>
 
-      </div>
+      {/* seta dinâmica */}
+      <span className="ml-auto text-gold/0 group-hover:text-gold transition-transform duration-300 group-hover:translate-x-[2px]">
+        →
+      </span>
+
+    </div>
+  ))}
+</div>
 
     </div>
 
@@ -363,29 +391,39 @@ export default function App() {
       </p>
 
       {/* BENEFÍCIOS */}
-      <ul className="mt-[40px] grid gap-[16px] sm:grid-cols-2">
+<ul className="mt-[40px] grid gap-[14px] sm:grid-cols-2">
 
-        {[
-          { t: "Baixo investimento", d: "Kits pensados pra começar pequeno." },
-          { t: "Margem 2x – 3x", d: "Preço de atacado, venda no varejo." },
-          { t: "Flexibilidade", d: "WhatsApp, Insta ou presencial." },
-          { t: "Demanda contínua", d: "Vende o ano inteiro." },
-        ].map((b) => (
-          <li
-            key={b.t}
-            className="border-t border-cream/15 pt-[16px]"
-          >
-            <p className="text-[20px] text-gold">
-              {b.t}
-            </p>
+  {[
+    { t: "Baixo investimento", d: "Kits pensados pra começar pequeno." },
+    { t: "Margem 2x – 3x", d: "Preço de atacado, venda no varejo." },
+    { t: "Flexibilidade", d: "WhatsApp, Insta ou presencial." },
+    { t: "Demanda contínua", d: "Vende o ano inteiro." },
+  ].map((b) => (
+    <li
+      key={b.t}
+      className="group relative rounded-[16px] border border-cream/10 bg-cream/5
+                 p-[18px] md:p-[20px] backdrop-blur-sm
+                 transition-all duration-300
+                 hover:border-gold/30 hover:bg-cream/10 hover:translate-y-[-2px]
+                 hover:shadow-[0_15px_40px_rgba(0,0,0,0.2)]"
+    >
 
-            <p className="mt-[8px] text-[13px] leading-[1.6] text-cream/70">
-              {b.d}
-            </p>
-          </li>
-        ))}
+      {/* título */}
+      <p className="text-[16px] md:text-[18px] font-semibold text-gold">
+        {b.t}
+      </p>
 
-      </ul>
+      {/* descrição */}
+      <p className="mt-[6px] text-[13px] md:text-[14px] leading-[1.6] text-cream/70">
+        {b.d}
+      </p>
+
+      {/* micro destaque no hover */}
+      <div className="mt-[12px] h-[1px] w-0 bg-gold/40 transition-all duration-300 group-hover:w-full" />
+
+    </li>
+  ))}
+</ul>
 
     </div>
   </div>
@@ -427,47 +465,56 @@ export default function App() {
     </div>
 
     {/* STEPS */}
-    <ol className="mt-[64px] grid gap-[18px] md:grid-cols-4">
+<ol className="mt-[64px] grid gap-[16px] md:grid-cols-4">
 
-      {[
-        { t: "Escolha seu kit", d: "Selecione o kit ideal para o seu bolso e perfil." },
-        { t: "Receba as peças", d: "Enviamos com agilidade direto para sua casa." },
-        { t: "Comece a vender", d: "WhatsApp, Instagram, amigos e família." },
-        { t: "Reinvista e cresça", d: "Use o lucro para ampliar seu estoque." },
-      ].map((s, i) => (
-        <li
-          key={s.t}
-          className="group relative rounded-[18px] border border-ink/10 bg-white/40 p-[28px] backdrop-blur-sm transition hover:border-gold/30 hover:bg-white/60 md:p-[32px]"
-        >
+  {[
+    { t: "Escolha seu kit", d: "Selecione o kit ideal para o seu bolso e perfil." },
+    { t: "Receba as peças", d: "Enviamos com agilidade direto para sua casa." },
+    { t: "Comece a vender", d: "WhatsApp, Instagram, amigos e família." },
+    { t: "Reinvista e cresça", d: "Use o lucro para ampliar seu estoque." },
+  ].map((s, i) => (
+    <li
+      key={s.t}
+      className="group relative overflow-hidden rounded-[20px]
+                 border border-ink/10 bg-ink/5 p-[26px] md:p-[30px]
+                 backdrop-blur-md transition-all duration-300
+                 hover:border-gold/30 hover:bg-ink/10
+                 hover:translate-y-[-4px] hover:shadow-[0_20px_50px_rgba(0,0,0,0.18)]"
+    >
 
-          {/* número estilizado */}
-          <div className="flex items-center justify-between">
-            <span className="text-[42px] md:text-[48px] font-light text-gold/80">
-              {String(i + 1).padStart(2, "0")}
-            </span>
+      {/* glow de fundo no hover */}
+      <div className="absolute inset-0 opacity-0 transition group-hover:opacity-100">
+        <div className="absolute -top-[80px] -right-[80px] h-[160px] w-[160px] rounded-full bg-gold/10 blur-3xl" />
+      </div>
 
-            <span className="text-gold/0 transition group-hover:text-gold">
-              →
-            </span>
-          </div>
+      {/* topo */}
+      <div className="relative flex items-center justify-between">
+        <span className="text-[44px] md:text-[52px] font-light text-gold/70 leading-none">
+          {String(i + 1).padStart(2, "0")}
+        </span>
 
-          {/* título */}
-          <h3 className="mt-[18px] text-[18px] md:text-[22px] text-ink font-medium leading-[1.2]">
-            {s.t}
-          </h3>
+        {/* indicador de progresso */}
+        <span className="h-[8px] w-[8px] rounded-full bg-gold/40 group-hover:bg-gold transition" />
+      </div>
 
-          {/* descrição */}
-          <p className="mt-[10px] text-[13px] md:text-[14px] leading-[1.7] text-ink/65">
-            {s.d}
-          </p>
+      {/* título */}
+      <h3 className="relative mt-[18px] text-[18px] md:text-[20px] font-semibold text-ink leading-[1.2]">
+        {s.t}
+      </h3>
 
-          {/* linha decorativa sutil */}
-          <div className="mt-[18px] h-px w-full bg-gradient-to-r from-gold/20 to-transparent" />
+      {/* descrição */}
+      <p className="relative mt-[10px] text-[13px] md:text-[14px] leading-[1.7] text-ink/70">
+        {s.d}
+      </p>
 
-        </li>
-      ))}
+      {/* linha progressiva */}
+      <div className="relative mt-[18px] h-[2px] w-full bg-ink/5 overflow-hidden rounded-full">
+        <div className="h-full w-0 bg-gold transition-all duration-500 group-hover:w-full" />
+      </div>
 
-    </ol>
+    </li>
+  ))}
+</ol>
 
   </div>
 </section>
@@ -602,32 +649,42 @@ export default function App() {
     </div>
 
     {/* LISTA */}
-    <ul className="grid gap-px bg-cream/10">
+<ul className="grid gap-[12px] md:gap-[16px]">
 
-      {[
-        "Kit completo com peças de alta saída",
-        "Preço de atacado real",
-        "Suporte para suas primeiras vendas",
-        "Material de divulgação pronto",
-        "Reposição rápida do estoque",
-      ].map((b, i) => (
-        <li
-          key={b}
-          className="flex items-center gap-[24px] bg-ink py-[20px] px-[16px]"
-        >
+  {[
+    "Kit completo com peças de alta saída",
+    "Preço de atacado real",
+    "Suporte para suas primeiras vendas",
+    "Material de divulgação pronto",
+    "Reposição rápida do estoque",
+  ].map((b, i) => (
+    <li
+      key={b}
+      className="group relative flex items-start gap-[16px] md:gap-[20px] rounded-[16px]
+                 border border-cream/10 bg-ink/80 px-[18px] py-[18px]
+                 backdrop-blur-md transition-all duration-300
+                 hover:bg-ink hover:border-gold/40 hover:shadow-[0_10px_30px_rgba(0,0,0,0.35)]
+                 hover:translate-y-[-2px]"
+    >
 
-          <span className="text-[12px] text-gold">
-            0{i + 1}
-          </span>
+      {/* indicador */}
+      <div
+        className="flex h-[34px] w-[34px] items-center justify-center rounded-full
+                   bg-gold/10 text-gold text-[12px] font-semibold
+                   ring-1 ring-gold/20 group-hover:bg-gold group-hover:text-ink
+                   transition-all"
+      >
+        {String(i + 1).padStart(2, "0")}
+      </div>
 
-          <span className="text-[15px] md:text-[17px] leading-[1.6] text-cream/90">
-            {b}
-          </span>
+      {/* texto */}
+      <span className="text-[15px] md:text-[17px] leading-[1.5] text-cream/90 group-hover:text-cream transition-colors">
+        {b}
+      </span>
 
-        </li>
-      ))}
-
-    </ul>
+    </li>
+  ))}
+</ul>
 
   </div>
 </section>
@@ -668,56 +725,71 @@ export default function App() {
     </div>
 
     {/* FAQ LIST */}
-    <div>
+<div className="space-y-[12px] md:space-y-[16px]">
 
-      {[
-        {
-          q: "Preciso de experiência para revender?",
-          a: "Não. Nossos kits e o suporte foram pensados exatamente para quem está começando do zero.",
-        },
-        {
-          q: "Quanto preciso investir?",
-          a: "Temos kits iniciais acessíveis. Você escolhe o que cabe no seu bolso e começa pequeno.",
-        },
-        {
-          q: "Como eu vendo as peças?",
-          a: "WhatsApp, Instagram, indicação para amigos e família. Te orientamos passo a passo.",
-        },
-        {
-          q: "Onde encontrar clientes?",
-          a: "Começa no seu círculo próximo e nas redes sociais. A demanda por semijoias é alta o ano inteiro.",
-        },
-        {
-          q: "E se eu não conseguir vender?",
-          a: "Por isso o suporte é incluso: te ajudamos a destravar as primeiras vendas e ganhar confiança.",
-        },
-      ].map((f) => (
-        <details
-          key={f.q}
-          className="group border-b border-ink/15 py-[20px]"
+  {[
+    {
+      q: "Preciso de experiência para revender?",
+      a: "Não. Nossos kits e o suporte foram pensados exatamente para quem está começando do zero.",
+    },
+    {
+      q: "Quanto preciso investir?",
+      a: "Temos kits iniciais acessíveis. Você escolhe o que cabe no seu bolso e começa pequeno.",
+    },
+    {
+      q: "Como eu vendo as peças?",
+      a: "WhatsApp, Instagram, indicação para amigos e família. Te orientamos passo a passo.",
+    },
+    {
+      q: "Onde encontrar clientes?",
+      a: "Começa no seu círculo próximo e nas redes sociais. A demanda por semijoias é alta o ano inteiro.",
+    },
+    {
+      q: "E se eu não conseguir vender?",
+      a: "Por isso o suporte é incluso: te ajudamos a destravar as primeiras vendas e ganhar confiança.",
+    },
+  ].map((f) => (
+    <details
+      key={f.q}
+      className="group rounded-[16px] border border-ink/10 bg-ink/5 px-[20px] py-[18px]
+                 backdrop-blur-md transition-all duration-300
+                 hover:border-gold/30 hover:bg-ink/10 hover:shadow-[0_10px_30px_rgba(0,0,0,0.15)]"
+    >
+
+      <summary
+        className="flex cursor-pointer list-none items-center justify-between gap-[20px]
+                   text-[16px] md:text-[20px] font-medium text-ink"
+      >
+        <span className="leading-[1.4]">{f.q}</span>
+
+        {/* ícone moderno */}
+        <span
+          aria-hidden
+          className="relative flex h-[34px] w-[34px] items-center justify-center
+                     rounded-full border border-ink/20 text-ink/70
+                     transition-all duration-300
+                     group-open:rotate-45 group-open:border-gold group-open:bg-gold group-open:text-ink
+                     group-hover:border-gold/40"
         >
+          +
+        </span>
+      </summary>
 
-          <summary className="flex cursor-pointer list-none items-center justify-between gap-[24px] text-[18px] md:text-[22px] text-ink">
+      <div className="overflow-hidden">
+        <p
+          className="mt-[14px] max-w-[680px] text-[14px] md:text-[16px]
+                     leading-[1.7] text-ink/70"
+        >
+          {f.a}
+        </p>
+      </div>
 
-            <span>{f.q}</span>
+      {/* linha de destaque no open */}
+      <div className="mt-[14px] h-[1px] w-full bg-transparent group-open:bg-gold/20 transition-all" />
 
-            <span
-              aria-hidden
-              className="grid h-[32px] w-[32px] shrink-0 place-items-center border border-ink/30 text-ink transition group-open:rotate-45 group-open:border-gold group-open:bg-gold group-open:text-ink"
-            >
-              +
-            </span>
-
-          </summary>
-
-          <p className="mt-[16px] max-w-[640px] text-[14px] md:text-[16px] leading-[1.7] text-ink/70">
-            {f.a}
-          </p>
-
-        </details>
-      ))}
-
-    </div>
+    </details>
+  ))}
+</div>
   </div>
 </section>
 
