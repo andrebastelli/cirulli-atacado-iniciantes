@@ -726,59 +726,28 @@ export default function App() {
 
         <div className="mt-[40px] flex flex-col items-start gap-[14px] sm:flex-row sm:items-center sm:gap-[20px]">
   <a
-    href="#comprar"
+  href="#como-funciona"
+  className="
+    group inline-flex items-center gap-[8px]
+    text-[12px] font-semibold uppercase tracking-[2px]
+    text-cream/70 transition-all duration-300
+    hover:text-cream
+  "
+>
+  Ver como funciona
+
+  <span
     className="
-      group relative inline-flex items-center justify-center
-      overflow-hidden
-      bg-gold px-[28px] py-[15px]
-      text-[13px] font-bold uppercase tracking-[1.6px]
-      text-ink
-      shadow-[0_14px_35px_rgba(0,0,0,0.22)]
-      transition-all duration-300
-      hover:scale-[1.03]
-      hover:shadow-[0_18px_45px_rgba(0,0,0,0.30)]
+      flex h-[28px] w-[28px] items-center justify-center
+      rounded-full border border-cream/20 bg-cream/10
+      text-[14px] transition-all duration-300
+      group-hover:border-gold/40 group-hover:bg-gold/10
+      group-hover:translate-x-[3px]
     "
   >
-    <span className="relative z-10 flex items-center gap-[10px]">
-      Quero começar agora
-      <span className="transition-transform duration-300 group-hover:translate-x-[4px]">
-        →
-      </span>
-    </span>
-
-    <span
-      className="
-        absolute inset-0 -translate-x-full
-        bg-gradient-to-r from-transparent via-white/30 to-transparent
-        transition-transform duration-700
-        group-hover:translate-x-full
-      "
-    />
-  </a>
-
-  <a
-    href="#como-funciona"
-    className="
-      group inline-flex items-center gap-[8px]
-      text-[12px] font-semibold uppercase tracking-[2px]
-      text-ink/65 transition-all duration-300
-      hover:text-ink
-    "
-  >
-    Ver como funciona
-
-    <span
-      className="
-        flex h-[28px] w-[28px] items-center justify-center
-        rounded-full border border-ink/10 bg-ink/5
-        text-[14px] transition-all duration-300
-        group-hover:border-gold/40 group-hover:bg-gold/10
-        group-hover:translate-x-[3px]
-      "
-    >
-      →
-    </span>
-  </a>
+    →
+  </span>
+</a>
 </div>
 
         <p className="mt-[16px] text-[11px] uppercase tracking-[2px] text-cream/55">
