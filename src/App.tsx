@@ -726,6 +726,37 @@ export default function App() {
 
         <div className="mt-[40px] flex flex-col items-start gap-[14px] sm:flex-row sm:items-center sm:gap-[20px]">
   <a
+    href="#comprar"
+    className="
+      group relative inline-flex items-center justify-center
+      overflow-hidden
+      bg-gold px-[28px] py-[15px]
+      text-[13px] font-bold uppercase tracking-[1.6px]
+      text-ink
+      shadow-[0_14px_35px_rgba(0,0,0,0.22)]
+      transition-all duration-300
+      hover:scale-[1.03]
+      hover:shadow-[0_18px_45px_rgba(0,0,0,0.30)]
+    "
+  >
+    <span className="relative z-10 flex items-center gap-[10px]">
+      Quero começar agora
+      <span className="transition-transform duration-300 group-hover:translate-x-[4px]">
+        →
+      </span>
+    </span>
+
+    <span
+      className="
+        absolute inset-0 -translate-x-full
+        bg-gradient-to-r from-transparent via-white/30 to-transparent
+        transition-transform duration-700
+        group-hover:translate-x-full
+      "
+    />
+  </a>
+
+  <a
   href="#como-funciona"
   className="
     group inline-flex items-center gap-[8px]
