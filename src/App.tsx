@@ -757,28 +757,28 @@ export default function App() {
   </a>
 
   <a
-    href="#como-funciona"
+  href="#como-funciona"
+  className="
+    group inline-flex items-center gap-[8px]
+    text-[12px] font-semibold uppercase tracking-[2px]
+    text-cream/70 transition-all duration-300
+    hover:text-cream
+  "
+>
+  Ver como funciona
+
+  <span
     className="
-      group inline-flex items-center gap-[8px]
-      text-[12px] font-semibold uppercase tracking-[2px]
-      text-ink/65 transition-all duration-300
-      hover:text-ink
+      flex h-[28px] w-[28px] items-center justify-center
+      rounded-full border border-cream/20 bg-cream/10
+      text-[14px] transition-all duration-300
+      group-hover:border-gold/40 group-hover:bg-gold/10
+      group-hover:translate-x-[3px]
     "
   >
-    Ver como funciona
-
-    <span
-      className="
-        flex h-[28px] w-[28px] items-center justify-center
-        rounded-full border border-ink/10 bg-ink/5
-        text-[14px] transition-all duration-300
-        group-hover:border-gold/40 group-hover:bg-gold/10
-        group-hover:translate-x-[3px]
-      "
-    >
-      →
-    </span>
-  </a>
+    →
+  </span>
+</a>
 </div>
 
         <p className="mt-[16px] text-[11px] uppercase tracking-[2px] text-cream/55">
